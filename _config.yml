@@ -4,23 +4,14 @@ author:
   email: JoaoPaulo.PaivaHolz@gmail.com
 
 description: >
-  Fazer uma pagina portifolio utilizando github pages.
-
-
-## Objetivo do Repo
-
-
-## Dataset para Analise definido
-
-# Build settings
+  Repositorio da matéria de Topicos em computação, essa pagina tem como objetivo ser 
+  um exemplo de pagina portifolio com analises de datasets definidos na materia.
 
 theme: minima
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
-# Theme-specific settings
 
 minima:
   # Minima date format.

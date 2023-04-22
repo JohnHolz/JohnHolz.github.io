@@ -1,5 +1,4 @@
-<title>Repositorio da Materia Optativa de Topicos em computação</title>
-
+# Repositorio da Materia Optativa de Topicos em computação
 
 ## Objetivo do Repo
 
