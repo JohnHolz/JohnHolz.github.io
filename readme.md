@@ -1,0 +1,6 @@
+# Repositorio da Materia Optativa de Topicos em computação
+
+## Objetivo do Repo
+
+Fazer uma pagina portifolio utilizando github pages.
+
