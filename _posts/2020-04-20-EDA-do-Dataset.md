@@ -3,14 +3,15 @@ layout: post
 title: "Analise Descritiva do Dataset"
 categories: EDA
 author:
-- João Holz
+  - João Holz
 meta: "Ufes - IC 1 - Departamento de Estatística"
 ---
 
 Utilizando o Dataset do inca PRODES, temos as seguintes limitações. Ano inicial é 1988, e o ano final 2021. Então Faremos uma comparação quase que historica das proporções desmatadas em cada um dos estados onde está presente a amazônia legal
 
 ## Nossos Dados
-Nossos dados são uma série histórica do total de kilometros quadrados (km²) desmatados. Com Index sendo o ano e as colunas a quantidade desmatada no estado. 
+
+Nossos dados são uma série histórica do total de kilometros quadrados (km²) desmatados. Com Index sendo o ano e as colunas a quantidade desmatada no estado.
 
 <div>
 <style scoped>
@@ -25,6 +26,7 @@ Nossos dados são uma série histórica do total de kilometros quadrados (km²) 
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -114,47 +116,35 @@ Nossos dados são uma série histórica do total de kilometros quadrados (km²) 
 
 ## Proporções
 
-Nesse primeiro momento de analise descritiva não vou padronizar ou dividir pelo tamanho do estado. Vamos comparar o desmatado total por estado comparando a primeira decada de coleta com o todo, para ver se algum estado se mostra muito discrepante recentemente nesse quesito.     
-Os Estados tem tamanhos muito diferentes, a quantidade desmatada vai ser muito influenciada por isso. Isso está nos itens de melhora nos próximos passos.    
+Nesse primeiro momento de analise descritiva não vou padronizar ou dividir pelo tamanho do estado. Vamos comparar o desmatado total por estado comparando a primeira decada de coleta com o todo, para ver se algum estado se mostra muito discrepante recentemente nesse quesito.  
+Os Estados tem tamanhos muito diferentes, a quantidade desmatada vai ser muito influenciada por isso. Isso está nos itens de melhora nos próximos passos.
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_3_0.png)
-
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_4_0.png)
-
+| Primeiros 10 Anos                                                                                         | Total (Km²)                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_4_0.png) | ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_3_0.png) |
 
 ## Serie Histórica
 
-Vemos nas series historicas.
+Na série historica vemos uma parabola descendo principalmente na decada de 2000, atingindo seu minimo em 2012. No grafico acumulado, vemos que na época que houve diminuição do desmatamento aconteceu para todos estados de maneira proporcional, provavelmente alguma regulamentação estadual ou federal.
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_5_0.png)
-
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_6_0.png)
-
+| Serie Histórica                                                                                           | Acumulada (Km²)                                                                                           |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_5_0.png) | ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_6_0.png) |
 
 ## Mapa
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_10_0.png)
+Não vemos muitas alterações nos mapas pois vemos parecido com o que vimos acina nas séries históricas.
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_11_0.png)
+| Primeiros 10 Anos                                                                                          | Total                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_11_0.png) | ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_10_0.png) |
 
-
-<div>
-<div class="box">
-    <img src="https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_11_0.png"/>
-    <span> Primeiros 10 anos </span>
-</div>
-<div class="box">
-    <img src="https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_10_0.png"/>
-    <span> Total </span>
-</div>
-</div>
-
-
-
+obs: Para plotar os mapas utilizamos o pacote geobr que é suportado pelo governo brasileiro, ele nós ajuda com o conjunto de pontos para plotar o mapa do brasil com geopandas.
 
 ## Conclusão
 
-Aparentemente o desmatamento reduziu muito pós 2000, e faz uma parabola começando a subir de novo pro fim da segunda decada de dados. Podem ser muitos motivos como politicas anti desmatamento dos estados envolvidos, do governo federal. 
+Aparentemente o desmatamento reduziu muito pós 2000, principalmente entre 2000-2010, atingindo seu minimo em 2012, fazendo uma especie de parabola começando a subir de novo pro fim da segunda decada de dados. Podem ser muitos motivos como politicas anti desmatamento dos estados envolvidos, do governo federal.
 
 ## Próximos Passos
-Adicionar na analise o tamanho do estado do Brasil.
+
+Adicionar covariaveis na analise, como o tamanho de cada estado e sua população. Adicionar ACF e PACF das séries.
