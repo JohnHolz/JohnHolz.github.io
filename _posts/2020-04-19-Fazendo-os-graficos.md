@@ -4,11 +4,11 @@ import pandas as pd, seaborn as sns, matplotlib.pyplot as plt
 import time 
 import warnings
 warnings.filterwarnings("ignore")
-
 ```
 
 
 ```python
+site = "http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes"
 df = pd.DataFrame(pd.read_html(site)[1])
 new_header = df.iloc[0] 
 df = df[1:-2]
@@ -20,20 +20,131 @@ df = df.apply(pd.to_numeric)
 
 
 ```python
-_ = plt.title('Acumulado Desmatamento',fontsize=18)
-_ = plt.pie(df.iloc[:,:-1].sum(),labels=df.iloc[:,:-1].columns)
+df.head()
 ```
 
 
-    
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_2_0.png)
-    
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>estado</th>
+      <th>AC</th>
+      <th>AM</th>
+      <th>AP</th>
+      <th>MA</th>
+      <th>MT</th>
+      <th>PA</th>
+      <th>RO</th>
+      <th>RR</th>
+      <th>TO</th>
+      <th>AMZ LEGAL</th>
+    </tr>
+    <tr>
+      <th>Ano/Estados</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1988</th>
+      <td>620</td>
+      <td>1510</td>
+      <td>60</td>
+      <td>2450</td>
+      <td>5140</td>
+      <td>6990</td>
+      <td>2340</td>
+      <td>290</td>
+      <td>1650</td>
+      <td>21050</td>
+    </tr>
+    <tr>
+      <th>1989</th>
+      <td>540</td>
+      <td>1180</td>
+      <td>130</td>
+      <td>1420</td>
+      <td>5960</td>
+      <td>5750</td>
+      <td>1430</td>
+      <td>630</td>
+      <td>730</td>
+      <td>17770</td>
+    </tr>
+    <tr>
+      <th>1990</th>
+      <td>550</td>
+      <td>520</td>
+      <td>250</td>
+      <td>1100</td>
+      <td>4020</td>
+      <td>4890</td>
+      <td>1670</td>
+      <td>150</td>
+      <td>580</td>
+      <td>13730</td>
+    </tr>
+    <tr>
+      <th>1991</th>
+      <td>380</td>
+      <td>980</td>
+      <td>410</td>
+      <td>670</td>
+      <td>2840</td>
+      <td>3780</td>
+      <td>1110</td>
+      <td>420</td>
+      <td>440</td>
+      <td>11030</td>
+    </tr>
+    <tr>
+      <th>1992</th>
+      <td>400</td>
+      <td>799</td>
+      <td>36</td>
+      <td>1135</td>
+      <td>4674</td>
+      <td>3787</td>
+      <td>2265</td>
+      <td>281</td>
+      <td>409</td>
+      <td>13786</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 
 
 
 ```python
-_ = plt.title('Amazônia Legal - 1988',fontsize=18)
-_ = plt.pie(df.iloc[0,:-1],labels=df.iloc[:,:-1].columns)
+_ = plt.title('Proporção (1988-2021)',fontsize=18)
+_ = plt.pie(df.iloc[:,:-1].sum(),labels=df.iloc[:,:-1].columns)
 ```
 
 
@@ -44,9 +155,8 @@ _ = plt.pie(df.iloc[0,:-1],labels=df.iloc[:,:-1].columns)
 
 
 ```python
-_ = df.plot(marker='o')
-_ = plt.legend(title="")
-_ = plt.title('Amazônia Legal - Desmatamento por estado e Ano',fontsize=18)
+_ = plt.title('Proporção (1988-1998)',fontsize=18)
+_ = plt.pie(df.iloc[:10,:-1].sum(),labels=df.iloc[:,:-1].columns)
 ```
 
 
@@ -57,14 +167,27 @@ _ = plt.title('Amazônia Legal - Desmatamento por estado e Ano',fontsize=18)
 
 
 ```python
-_ = df.cumsum().plot(marker='')
+_ = df.plot(marker='o')
 _ = plt.legend(title="")
-_ = plt.title('Acumulado por estado e Ano - desde 1988',fontsize=18)
+_ = plt.title('Amazônia Legal - Desmatamento por estado e Ano (km²)',fontsize=18)
 ```
 
 
     
 ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_5_0.png)
+    
+
+
+
+```python
+_ = df.cumsum().plot(marker='')
+_ = plt.legend(title="")
+_ = plt.title('Acumulado por estado e Ano - desde 1988 (km²)',fontsize=18)
+```
+
+
+    
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_6_0.png)
     
 
 
@@ -79,17 +202,13 @@ estados = gbr.read_state()
 to_merge = pd.DataFrame(df.sum())
 to_merge.columns = ['desmatamento']
 to_merge.index.name = 'estado'
-```
-
-
-```python
 estados = estados.join(to_merge,on='abbrev_state')
 estados = estados.dropna()
 ```
 
 
 ```python
-estados
+estados.head().iloc[:,[1,2,3,4,6]]
 ```
 
 
@@ -113,105 +232,53 @@ estados
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>code_state</th>
       <th>abbrev_state</th>
       <th>name_state</th>
       <th>code_region</th>
       <th>name_region</th>
-      <th>geometry</th>
       <th>desmatamento</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>11.0</td>
       <td>RO</td>
       <td>Rondônia</td>
       <td>1.0</td>
       <td>Norte</td>
-      <td>MULTIPOLYGON (((-63.32721 -7.97672, -62.86662 ...</td>
-      <td>64623.0</td>
+      <td>23153.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>12.0</td>
       <td>AC</td>
       <td>Acre</td>
       <td>1.0</td>
       <td>Norte</td>
-      <td>MULTIPOLYGON (((-73.18253 -7.33550, -72.58477 ...</td>
-      <td>16668.0</td>
+      <td>5453.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>13.0</td>
       <td>AM</td>
       <td>Amazonas</td>
       <td>1.0</td>
       <td>Norte</td>
-      <td>MULTIPOLYGON (((-67.32609 2.02971, -67.31682 2...</td>
-      <td>30790.0</td>
+      <td>9455.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>14.0</td>
       <td>RR</td>
       <td>Roraima</td>
       <td>1.0</td>
       <td>Norte</td>
-      <td>MULTIPOLYGON (((-60.20051 5.26434, -60.19273 5...</td>
-      <td>8909.0</td>
+      <td>2869.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>15.0</td>
       <td>PA</td>
       <td>Pará</td>
       <td>1.0</td>
       <td>Norte</td>
-      <td>MULTIPOLYGON (((-54.95431 2.58369, -54.93542 2...</td>
-      <td>162612.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>16.0</td>
-      <td>AP</td>
-      <td>Amapá</td>
-      <td>1.0</td>
-      <td>Norte</td>
-      <td>MULTIPOLYGON (((-51.17970 4.00008, -51.17739 3...</td>
-      <td>1656.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>17.0</td>
-      <td>TO</td>
-      <td>Tocantins</td>
-      <td>1.0</td>
-      <td>Norte</td>
-      <td>MULTIPOLYGON (((-48.35878 -5.17008, -48.33846 ...</td>
-      <td>8763.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>21.0</td>
-      <td>MA</td>
-      <td>Maranhão</td>
-      <td>2.0</td>
-      <td>Nordeste</td>
-      <td>MULTIPOLYGON (((-45.84073 -1.04548, -45.84099 ...</td>
-      <td>26103.0</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>51.0</td>
-      <td>MT</td>
-      <td>Mato Grosso</td>
-      <td>5.0</td>
-      <td>Centro Oeste</td>
-      <td>MULTIPOLYGON (((-54.89485 -17.62150, -54.89704...</td>
-      <td>150151.0</td>
+      <td>51884.0</td>
     </tr>
   </tbody>
 </table>
@@ -225,14 +292,40 @@ f, ax = plt.subplots()
 _ = f.set_size_inches(16, 16)
 _ = estados.plot(ax = ax,
              column= 'desmatamento',
-             cmap="Greens",
+             cmap="Reds",
              edgecolor="black",
              linewidth=0.25)
+_ = plt.title('Total Acumulado',fontsize=22)
 ```
 
 
     
 ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_10_0.png)
+    
+
+
+
+```python
+estados = gbr.read_state()
+to_merge = pd.DataFrame(df.iloc[:10,:].sum())
+to_merge.columns = ['desmatamento']
+to_merge.index.name = 'estado'
+estados = estados.join(to_merge,on='abbrev_state')
+estados = estados.dropna()
+
+f, ax = plt.subplots()
+_ = f.set_size_inches(16, 16)
+_ = estados.plot(ax = ax,
+             column= 'desmatamento',
+             cmap="Reds",
+             edgecolor="black",
+            linewidth=0.25)
+_ = plt.title('Primeiros 10 anos (1988-1998)',fontsize=22)
+```
+
+
+    
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_11_0.png)
     
 
 

@@ -7,108 +7,136 @@ author:
 meta: "Ufes - IC 1 - Departamento de Estatística"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+Utilizando o Dataset do inca PRODES, temos as seguintes limitações. Ano inicial é 1988, e o ano final 2021. Então Faremos uma comparação quase que historica das proporções desmatadas em cada um dos estados onde está presente a amazônia legal
 
-## Some great heading (h2)
+## Nossos Dados
+Nossos dados são uma série histórica do total de kilometros quadrados (km²) desmatados. Com Index sendo o ano e as colunas a quantidade desmatada no estado. 
 
-Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-## Another great heading (h2)
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ano/Estados</th>
+      <th>AC</th>
+      <th>AM</th>
+      <th>AP</th>
+      <th>MA</th>
+      <th>MT</th>
+      <th>PA</th>
+      <th>RO</th>
+      <th>RR</th>
+      <th>TO</th>
+      <th>AMZ LEGAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1988</th>
+      <td>620</td>
+      <td>1510</td>
+      <td>60</td>
+      <td>2450</td>
+      <td>5140</td>
+      <td>6990</td>
+      <td>2340</td>
+      <td>290</td>
+      <td>1650</td>
+      <td>21050</td>
+    </tr>
+    <tr>
+      <th>1989</th>
+      <td>540</td>
+      <td>1180</td>
+      <td>130</td>
+      <td>1420</td>
+      <td>5960</td>
+      <td>5750</td>
+      <td>1430</td>
+      <td>630</td>
+      <td>730</td>
+      <td>17770</td>
+    </tr>
+    <tr>
+      <th>1990</th>
+      <td>550</td>
+      <td>520</td>
+      <td>250</td>
+      <td>1100</td>
+      <td>4020</td>
+      <td>4890</td>
+      <td>1670</td>
+      <td>150</td>
+      <td>580</td>
+      <td>13730</td>
+    </tr>
+    <tr>
+      <th>1991</th>
+      <td>380</td>
+      <td>980</td>
+      <td>410</td>
+      <td>670</td>
+      <td>2840</td>
+      <td>3780</td>
+      <td>1110</td>
+      <td>420</td>
+      <td>440</td>
+      <td>11030</td>
+    </tr>
+    <tr>
+      <th>1992</th>
+      <td>400</td>
+      <td>799</td>
+      <td>36</td>
+      <td>1135</td>
+      <td>4674</td>
+      <td>3787</td>
+      <td>2265</td>
+      <td>281</td>
+      <td>409</td>
+      <td>13786</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+## Proporções
 
-### Some great subheading (h3)
+Nesse primeiro momento de analise descritiva não vou padronizar ou dividir pelo tamanho do estado. Vamos comparar o desmatado total por estado comparando a primeira decada de coleta com o todo, para ver se algum estado se mostra muito discrepante recentemente nesse quesito.     
+Os Estados tem tamanhos muito diferentes, a quantidade desmatada vai ser muito influenciada por isso. Isso está nos itens de melhora nos próximos passos.    
 
-Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_3_0.png)
 
-Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.
-
-### Some great subheading (h3)
-
-Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
-
-> This quote will *change* your life. It will reveal the <i>secrets</i> of the universe, and all the wonders of humanity. Don't <em>misuse</em> it.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.
-
-### Some great subheading (h3)
-
-Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.
-
-```html
-<html>
-  <head>
-  </head>
-  <body>
-    <p>Hello, World!</p>
-  </body>
-</html>
-```
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_4_0.png)
 
 
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
+## Serie Histórica
 
-#### You might want a sub-subheading (h4)
+Vemos nas series historicas.
 
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_3_0.png)
 
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
-
-#### But it's probably overkill (h4)
-
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
-
-##### Could be a smaller sub-heading, `pacman` (h5)
-
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
-
-###### Small yet significant sub-heading  (h6)
-
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
-
-### Oh hai, an unordered list!!
-
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
-
-- First item, yo
-- Second item, dawg
-- Third item, what what?!
-- Fourth item, fo sheezy my neezy
-
-### Oh hai, an ordered list!!
-
-In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
-
-1. First item, yo
-2. Second item, dawg
-3. Third item, what what?!
-4. Fourth item, fo sheezy my neezy
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_3_0.png)
 
 
-
-## Headings are cool! (h2)
-
-Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
-
-Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
-
-Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.
-
-### Tables
-
-Title 1               | Title 2               | Title 3               | Title 4
---------------------- | --------------------- | --------------------- | ---------------------
-lorem                 | lorem ipsum           | lorem ipsum dolor     | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
+## Mapa
 
 
-Title 1 | Title 2 | Title 3 | Title 4
---- | --- | --- | ---
-lorem | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
-lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
-lorem ipsum dolor | lorem ipsum | lorem | lorem ipsum
-lorem ipsum dolor | lorem ipsum dolor sit | lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur
+## Conclusão
+
+Aparentemente o desmatamento reduziu muito pós 2000, e faz uma parabola começando a subir de novo pro fim da segunda decada de dados. Podem ser muitos motivos como politicas anti desmatamento dos estados envolvidos, do governo federal. 
+
+## Próximos Passos
+Adicionar na analise o tamanho do estado do Brasil.
