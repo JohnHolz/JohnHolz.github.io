@@ -126,12 +126,30 @@ Os Estados tem tamanhos muito diferentes, a quantidade desmatada vai ser muito i
 
 Vemos nas series historicas.
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_3_0.png)
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_5_0.png)
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_3_0.png)
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_6_0.png)
 
 
 ## Mapa
+
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_10_0.png)
+
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_11_0.png)
+
+
+<div>
+<div class="box">
+    <img src="https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_11_0.png"/>
+    <span> Primeiros 10 anos </span>
+</div>
+<div class="box">
+    <img src="https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_10_0.png"/>
+    <span> Total </span>
+</div>
+</div>
+
+
 
 
 ## Conclusão
