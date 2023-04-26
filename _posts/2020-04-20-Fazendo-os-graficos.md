@@ -26,7 +26,7 @@ _ = plt.pie(df.iloc[:,:-1].sum(),labels=df.iloc[:,:-1].columns)
 
 
     
-![png](output_2_0.png)
+![png](_posts/images/output_2_0.png)
     
 
 
@@ -38,7 +38,7 @@ _ = plt.pie(df.iloc[0,:-1],labels=df.iloc[:,:-1].columns)
 
 
     
-![png](output_3_0.png)
+![png](_posts/images/output_3_0.png)
     
 
 
@@ -51,7 +51,7 @@ _ = plt.title('Amazônia Legal - Desmatamento por estado e Ano',fontsize=18)
 
 
     
-![png](output_4_0.png)
+![png](_posts/images/output_4_0.png)
     
 
 
@@ -64,7 +64,7 @@ _ = plt.title('Acumulado por estado e Ano - desde 1988',fontsize=18)
 
 
     
-![png](output_5_0.png)
+![png](_posts/images/output_5_0.png)
     
 
 
@@ -232,7 +232,7 @@ _ = estados.plot(ax = ax,
 
 
     
-![png](output_10_0.png)
+![png](_posts/images/output_10_0.png)
     
 
 
