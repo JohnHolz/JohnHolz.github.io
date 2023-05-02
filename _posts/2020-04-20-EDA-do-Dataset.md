@@ -129,7 +129,7 @@ Na série historica vemos uma parabola descendo principalmente na decada de 2000
 
 ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_5_0.png) 
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_6_0.png) |
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_6_0.png)
 
 ## Mapa
 
