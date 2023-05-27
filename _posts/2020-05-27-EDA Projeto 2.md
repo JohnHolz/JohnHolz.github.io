@@ -49,14 +49,12 @@ Vemos abaixo que todos meus familiares, exceto eu, tem mais uso na SmartTV, quan
 Eu como assisto mais utilizando o computador, a partir de um monitor fica registrado como HTML5.
 Outra observação interessante é que quase não tem uso pelo celular, um pouco visto por Iphone por Ana e um pouco visto por Android pelo Pedro.  
 
-![png](images/heatmap_search.png)(https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/pieplot_clickstream.png)
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/heatmap_search.png)
 
 
 O grafico abaixo é do dataset de clickstream, que tem dados do click/interação do usuário, a partir dessas informações podemos criar a hipotese dela ser a pessoa que mais pausa o video enquanto está assistindo. Por outro lado temos meu irmão que deve pausar pouco por utilizar o video game para acessar a netflix, então podemos criar outras suposições. Pode ser mais dificil interagir ou como o equipamento não é proprio, o sistema pode registrar um numero menor de dados.
 
-![png](images/pieplot_clickstream.png)(https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/pieplot_clickstream.png)
-
-
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/pieplot_clickstream.png) 
 
 
 
