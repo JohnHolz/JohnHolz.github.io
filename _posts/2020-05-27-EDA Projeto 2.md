@@ -7,7 +7,7 @@ author:
 meta: "Ufes - IC 1 - Departamento de Estatística"
 ---
 
-# Projeto 2 - Dados pessoais Netflix
+# Dados pessoais Netflix
 
 Hoje com o mundo cada vez mais virtual, saimos da tv para o computador. Não sei se na tv conseguiriamos analisar tanto o usuário e seus interesses, mas certamente tentaremos procurar essas informações com apoio da Netflix. Veremos alguns padrões simples mas que nós trarão conclusões preciosas.
 
@@ -57,10 +57,32 @@ O grafico abaixo é do dataset de clickstream, que tem dados do click/interaçã
 ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/pieplot_clickstream.png) 
 
 
+----
+### Conteudo
 
-## Conclusão da EDA.
-A partir dos mapas de calor da horaXdia-da-semana.
 
+
+---- 
+
+### Heatmaps
+
+Pelo heatmap da minha irmã vemos os principais horarios da semana que ela utiliza a netflix.
+
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/heatmap_ana.png)
+
+
+Analisando meu heatmap vejo que existe um possivel ruído, quando vou dormir eu deixo a serie passando e pego no sono. O que faz com que continue por até 90 minutos. Então analisando o heatmap vemos um traço que leva até o começo da madrugada. PS: Tento me deitar antes das 00:00.
+
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/heatmap_joao.png)
+
+
+O Heatmap de luciana vemos ele bem claro. Como ela assiste quase que somente na sala. Vemos perfeitamente seus horarios de uso. As vezes meio dia no almoço com minha irmã, outra coisa que pode gerar ruído pois quando estão assistindo juntas geram dados apenas para 1 perfil.
+
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/heatmap_luciana.png)
+
+
+## Conclusão da EDA
+A partir dos mapas de calor da Hora X Dia-da-semana vemos que Luciana dorme cedo e utiliza quase exclusivamente na sala o serviço. Minha irmã pausa muito quando está assistindo, provavelmente para interagir com outra coisa. 
 
 
 ## Próximo Artigo
