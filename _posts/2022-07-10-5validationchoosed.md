@@ -7,8 +7,6 @@ author:
 meta: "Ufes - IC 1 - Departamento de Estatística"
 ---
 
-# Cross Validationw
-
 Vamos utilizar um k-fold como forma de validção, dividiremos em 10. K-folds funciona separando o dataset em k subsets de dados, e como temos 10 partições agora, podemos treinar em k-1 e testamos em k, e repetiremos esse processo k vezes. Assim teremos métricas mais confiáveis.
 
     "daí que a universalidade empírica é uma extensão arbitraria de validade"
