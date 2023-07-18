@@ -15,10 +15,10 @@ Sabendo que existem callbacks eu não adicionei pois tive de aguardar pacienteme
 
 **Kfold**
 
-fn: Número de falsos negativos, queremos que seja 0
-fp: Número de falsos positivos, apenas como metrica de desempate
-pha_y: Número de positivos no dataset para ser previsto
-thr: nível de significância que estamos utilizando pra classificar o asteroide como potencialmente perigoso (Threshold)
+**fn**: Número de falsos negativos, queremos que seja 0  
+**fp**: Número de falsos positivos, apenas como metrica de desempate  
+**pha_y**: Número de positivos no dataset para ser previsto  
+**thr**: nível de significância que estamos utilizando pra classificar o asteroide como potencialmente perigoso (Threshold)
 
 Utilizando a biblioteca sklearn dividimos em 10 o dataset e a cada iteração salvamos uma pequena sequencia de dados, depois de algumas horas de espera obtivemos os seguintes dados.
 
