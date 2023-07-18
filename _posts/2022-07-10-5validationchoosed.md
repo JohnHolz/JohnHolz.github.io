@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cross Validation"
+title: "5. Cross Validation"
 categories: EDA
 author:
   - João Holz
