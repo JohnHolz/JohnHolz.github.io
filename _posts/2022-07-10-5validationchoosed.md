@@ -40,8 +40,7 @@ Utilizando a biblioteca sklearn dividimos em 10 o dataset e a cada iteração sa
 
 # Conclusão
 
-Vemos que as métricas incrivelmente melhoraram, pois em cada interação do k-folds tem mais dados do que utilizamos na escolha dos modelos, o que mostra que fizemos um bom trabalho. Conseguimos um nível de qualidade de modelos muito bom,
-otimizamos a nossa métrica de falsos negativos, chegamos em 0 e nosso caso que mais erramos no k-folds erramos pouquissimos dados.
+Vemos que as métricas foram muito boas, apontando apenas os asteroides problemativos que já estavamos de olho antes. A cada interação do k-folds tem mais dados do que utilizamos na escolha dos modelos, o que mostra que fizemos um bom trabalho. Conseguimos um nível de qualidade de modelos muito bom, otimizamos a nossa métrica de falsos negativos, chegamos em 0 e nosso caso que mais erramos no k-folds erramos pouquissimos dados.
 
 Achei que no final seriamos derrotados pelo asteroide invísivel desfarçado de bonzinho mas conseguimos fazer os modelos acusarem.
 
