@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Analise Descritiva do Dataset"
+title: "Projeto 1: Analise Descritiva do Dataset"
 categories: EDA
 author:
   - João Holz
@@ -127,7 +127,7 @@ Os Estados tem tamanhos muito diferentes, a quantidade desmatada vai ser muito i
 
 Na série historica vemos uma parabola descendo principalmente na decada de 2000, atingindo seu minimo em 2012. No grafico acumulado, vemos que na época que houve diminuição do desmatamento aconteceu para todos estados de maneira proporcional, provavelmente alguma regulamentação estadual ou federal.
 
-![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_5_0.png) 
+![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_5_0.png)
 
 ![png](https://raw.githubusercontent.com/JohnHolz/JohnHolz.github.io/master/_posts/images/output_6_0.png)
 

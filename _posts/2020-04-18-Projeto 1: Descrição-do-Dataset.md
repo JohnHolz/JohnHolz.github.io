@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "Descrição do Dataset"
+title: "Projeto 1: Descrição do Dataset"
 categories: Fonte
 author:
-- João Holz
+  - João Holz
 meta: "Ufes - IC 1 - Departamento de Estatística"
 ---
 
-O dataset que irá ser utilizado nessa primeira analise foi encontrado em: 
+O dataset que irá ser utilizado nessa primeira analise foi encontrado em:
+
 - [Kaggle - Prodes Dataset](https://www.kaggle.com/datasets/fidelissauro/desmatamento-brasil)
 - [Site do Inpe - Prodes Dataset](http://www.obt.inpe.br/OBT/assuntos/programas/amazonia/prodes)
 
